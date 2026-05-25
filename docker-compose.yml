@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    develop:
+      watch:
+        - action: sync
+          path: ./app
+          target: /src/app
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json  
+    image: devadh/my_portfolio:v1.2
+    container_name: my_portfolio
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/src      
+
+   
+
+
