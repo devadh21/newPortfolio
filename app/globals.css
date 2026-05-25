@@ -2,61 +2,133 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500&family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
-    box-sizing: border-box;
-    font-family: 'Alegreya', sans-serif;
-    /* font-family: 'Ubuntu', sans-serif; */
-    overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-
-
-/* @layer utilities { 
-    .separator{
-        min-height:calc(100vh - 110px);
-    }
-
-  } */
-
-.full-screen{
-    @apply min-h-[calc(100vh-175px)] 
-}  
-.container{
-    @apply  mx-auto p-4
-}  
-.section_style{
-    @apply  bg-bg-color2-light dark:bg-bg-color2
-}  
-.section_hero_style{
-    @apply  dark:bg-bg-color bg-bg-color-light  
-}  
-.main_section_style{
-    @apply  w-[1024px] my-[39px]
-}  
-.style-h1{
-    @apply  text-[45px] text-primary 
-}  
-.style-btn{
-    @apply  grow-0 bg-primary hover:bg-lime-600  font-medium  text-sm  w-auto px-5 py-2.5 text-center text-black uppercase
-}  
-.style-btn-login-register{
-    @apply  text-slate-900     justify-center items-center   hover:bg-lime-600 hover:text-teal-50 p-2    cursor-pointer bg-primary
+html {
+  scroll-behavior: smooth;
 }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden;
+}
+
+.full-screen {
+  @apply min-h-[calc(100vh-175px)]
+}
+
+.container {
+  @apply mx-auto p-4
+}
+
+.section_style {
+  @apply bg-white dark:bg-bg-color
+}
+
+.section_style_alt {
+  @apply bg-bg-color2-light dark:bg-bg-color2
+}
+
+.section_hero_style {
+  @apply bg-gradient-to-br from-[rgba(255,195,152,0.2)] to-[rgba(255,234,190,0.3)] dark:from-bg-color dark:to-bg-color2
+}
+
+.main_section_style {
+  @apply w-[1024px] my-[39px]
+}
+
+.style-h1 {
+  @apply text-[44px] font-bold text-primary
+}
+
+.sub-heading {
+  @apply flex items-center gap-2 mb-2
+}
+
+.sub-heading p {
+  @apply text-primary font-medium text-sm uppercase tracking-wider
+}
+
+.sub-heading::before {
+  content: '';
+  @apply inline-block w-2 h-2 rounded-full bg-primary
+}
+
+.style-btn {
+  @apply relative overflow-hidden inline-block bg-primary hover:text-white text-white font-medium text-lg px-8 py-2.5 rounded-md border border-transparent transition-all duration-300
+}
+
+.style-btn::after {
+  content: '';
+  @apply absolute top-0 left-full w-full h-full bg-color-text-light dark:bg-white;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.style-btn:hover::after {
+  visibility: visible;
+  left: 0;
+}
+
+.style-btn span {
+  @apply relative z-10
+}
+
+.style-btn-login-register {
+  @apply text-white justify-center items-center p-2 cursor-pointer bg-primary hover:bg-[#e06000] rounded-md transition-colors duration-300
+}
+
 .style-social-media-icon {
-    @apply border border-transparent  hover:border-primary cursor-pointer rounded-full p-1 transition-all duration-500
-}  
+  @apply w-10 h-10 flex items-center justify-center rounded-md bg-gray-200 dark:bg-[#606060] hover:bg-primary dark:hover:bg-primary transition-all duration-300 cursor-pointer
+}
 
-/* .mobileScreenMenu{
-    transition-property:disply;
-} */
-  
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF5EF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6B00;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(-10px); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes BgMove3D {
+  0% { transform: translate3d(0px, 0px, 0px); }
+  50% { transform: translate3d(-30px, -30px, -30px); }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+
+@keyframes rotate360 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.floating {
+  animation: floatUpDown 3s infinite ease-in-out;
+}
+
+.bg-move-3d {
+  animation: BgMove3D 2s linear infinite;
+}
+
+.rotate-360 {
+  animation: rotate360 6s linear infinite;
+}

@@ -10,39 +10,40 @@ export default function MyWork() {
       <div className="container flex justify-center">
         <div className="main_section_style">
           <div className="text-center">
-            <p className="">Portfolio</p>
-            <div className="inline-block ">
-              <h1 className="style-h1 -mt-[12px] ">My Work </h1>
-              <hr className="my-2 h-1  border-t-0 bg-transparent bg-gradient-to-r from-transparent via-primary to-transparent opacity-25 dark:opacity-100" />
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <span className="w-2 h-2 rounded-full bg-primary"></span>
+              <p className="text-primary font-medium text-sm uppercase tracking-wider">Portfolio</p>
+            </div>
+            <div className="inline-block">
+              <h1 className="style-h1">My Work</h1>
+              <hr className="my-2 h-1 border-t-0 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
             </div>
           </div>
-          {/* Start card */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 mt-[55px] ">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-[55px]">
             {cardListsPortfolio.map((card, index) => (
               <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  transition: {
-                    duration: 0.5,
-                    delay: index * 0.2,
-                  },
-                }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: index * 0.15 } }}
+                viewport={{ once: true }}
                 key={index}
-                className="p-4 bg-bg-color-light dark:bg-bg-color border border-black  shadow-md shadow-black"
+                className="group rounded-lg overflow-hidden border border-orange-border dark:border-gray-700 hover:shadow-lg transition-all duration-300"
               >
-                <Image
-                  src={card.img}
-                  alt="Card image"
-                  width={360}
-                  height={360}
-                  className="hover:scale-105 duration-700"
-                />
-                <Link href={card.href} target="_blank">
-                  <div className=" pt-2 text-center uppercase">
-                    {card.title}
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={card.img}
+                    alt="Card image"
+                    width={360}
+                    height={360}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <div className="bg-primary text-white px-4 py-2 rounded-md transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 w-full">
+                      <Link href={card.href} target="_blank" className="block text-center text-sm font-medium uppercase">
+                        {card.title}
+                      </Link>
+                    </div>
                   </div>
-                </Link>
+                </div>
               </motion.div>
             ))}
           </div>

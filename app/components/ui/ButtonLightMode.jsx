@@ -3,12 +3,12 @@ import React from "react";
 export default function ButtonLightMode({on_click}) {
   return (
     <button
-        onClick={on_click}
-      className="hidden dark:flex   items-center"
+      onClick={on_click}
+      className="hidden dark:flex items-center"
       title="Light mode"
     >
       <svg
-        className="w-6 h-6  text-color-text hover:scale-110 "
+        className="w-6 h-6 text-color-text hover:text-primary hover:scale-110 transition-all duration-300"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

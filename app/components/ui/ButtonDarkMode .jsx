@@ -4,11 +4,11 @@ export default function ButtonDarkMode({on_click}) {
   return (
     <button
       onClick={on_click}
-      className="dark:hidden flex items-center  "
+      className="dark:hidden flex items-center"
       title="Dark mode"
     >
       <svg
-        className="w-6 h-6 text-black  hover:scale-110 "
+        className="w-6 h-6 text-black dark:text-color-text hover:text-primary hover:scale-110 transition-all duration-300"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

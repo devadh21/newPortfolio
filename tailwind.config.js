@@ -1,49 +1,51 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // darkMode: 'class',
   content: [
     "./node_modules/flowbite-react/**/*.js",
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {    
+  theme: {
     extend: {
       colors: {
-        'primary': '#8af034',
-        // 'primary': '#00adf4',
-        // 'primary': '#ff8d11',
-        // 'secondary': '#0092ff', 
-        'secondary': '#ffac10', 
-        //orange/ 'primary': '#FF896B',
-        'primary-light': '#FF896B',
-
-        'bg-color': '#636363',
-        'bg-color2': '#4d4f53',
-        // 'bg-color': '#333333',
-        // 'bg-color-light': '#e5e7eb',
-        
-        'bg-color-light': '#e5e7eb',
-        'bg-color2-light': '#f2f2f2',
-
-        'color-text': '#c9cece',
-        'color-text-light': '#000', 
-
+        'primary': '#FF6B00',
+        'secondary': '#606060',
+        'primary-light': '#FFF5EF',
+        'bg-color': '#101010',
+        'bg-color2': '#1a1a1a',
+        'bg-color-light': '#ffffff',
+        'bg-color2-light': '#FFF5EF',
+        'color-text': '#cccccc',
+        'color-text-light': '#101010',
+        'orange-border': '#FFE2D1',
       },
-      // screens: {
-      //   'sm': '576', // => @media (min-width: 576px) { ... }
-      //   'md': '768', // => @media (min-width: 768px) { ... }
-      //   'lg': '992', // => @media (min-width: 992px) { ... }
-      //   'xl': '1200', // => @media (min-width: 1200px) { ... }
-      //   '2xl': '1400', // => @media (min-width: 1400px) { ... }
-      // },
+      fontFamily: {
+        jost: ['Jost', 'sans-serif'],
+      },
+      animation: {
+        'float-up-down': 'floatUpDown 3s infinite ease-in-out',
+        'rotate-360': 'rotate360 6s linear infinite',
+        'bg-move-3d': 'BgMove3D 2s linear infinite',
+      },
+      keyframes: {
+        floatUpDown: {
+          '0%, 100%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(10px)' },
+        },
+        rotate360: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        BgMove3D: {
+          '0%': { transform: 'translate3d(0px, 0px, 0px)' },
+          '50%': { transform: 'translate3d(-30px, -30px, -30px)' },
+          '100%': { transform: 'translate3d(0px, 0px, 0px)' },
+        },
+      },
     },
- 
-
-      
   },
-  
   plugins: [
-    require("flowbite/plugin"), 
+    require("flowbite/plugin"),
   ],
 }
