@@ -274,8 +274,8 @@ export const cardListsPortfolio =[
    {
       id:6,
       href: "#",
-      img: "/img/matchKora_mobile_app.png",
-      title: 'MatchKora Mobile app - FIFA World Cup 2026'
+      img: "/img/install_matchKora.png",
+      title: 'scan the Qcode for install MatchKora Mobile app - FIFA World Cup 2026. '
   },
   
   
