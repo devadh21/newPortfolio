@@ -282,7 +282,7 @@ export const cardListsPortfolio =[
       id:7,
       href: "https://baytshawarma.devadh.com/",
       img: "/img/baytshawarma.png",
-      title: 'restaurant website named "BaytChawarma" that allows customers to browse the menu, place orders online, track their orders, and manage their accounts.'
+      title: 'restaurant website named "BaytShawarma" that allows customers to browse the menu, place orders online, track their orders, and manage their accounts.'
   },
   
   
