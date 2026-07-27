@@ -277,6 +277,13 @@ export const cardListsPortfolio =[
       img: "/img/install_matchKora4.png",
       title: 'scan the Qcode to install MatchKora Mobile app - FIFA World Cup 2026. '
   },
+  ,
+   {
+      id:7,
+      href: "https://baytshawarma.devadh.com/",
+      img: "/img/baytshawarma.png",
+      title: 'restaurant website named "BaytChawarma" that allows customers to browse the menu, place orders online, track their orders, and manage their accounts.'
+  },
   
   
 ]
