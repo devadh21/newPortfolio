@@ -243,31 +243,31 @@ export const cardInfoContact = [
 export const cardListsPortfolio =[
   {
       id:1,
-      href: "https://beehoney.devadh.com/",
+      href: "https://beehoney.devadh.site/",
       img: "/img/honeyStore.png",
       title: 'Honey Store',
   },
   {
       id:2,
-      href: "https://hmizatcom.devadh.com/",
+      href: "https://hmizatcom.devadh.site/",
       img: "/img/hmizatcom.png",
       title: 'Hmizatcom Marketplace',
   },
     {
       id:3,
-      href: "https://m3lamcom.devadh.com/",
+      href: "https://m3lamcom.devadh.site/",
       img: "/img/m3alamcom.png",
       title: 'M3alamCom - Professional Tradespeople Marketplace',
   },
       {
       id:4,
-      href: "https://nooroptic.devadh.com/",
+      href: "https://nooroptic.devadh.site/",
       img: "/img/nooroptic.png",
       title: 'Noor Optic - EyeWear website',
   },
   {
       id:5,
-      href: "https://matchkora.devadh.com/",
+      href: "https://matchkora.devadh.site/",
       img: "/img/matchkora.png",
       title: 'MatchKora - FIFA World Cup 2026'
   },
@@ -280,7 +280,7 @@ export const cardListsPortfolio =[
   ,
    {
       id:7,
-      href: "https://baytshawarma.devadh.com/",
+      href: "https://baytshawarma.devadh.site/",
       img: "/img/baytshawarma.png",
       title: 'restaurant website named "BaytShawarma" that allows customers to browse the menu, place orders online, track their orders, and manage their accounts.'
   },
